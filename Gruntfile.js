@@ -71,7 +71,6 @@ module.exports = function (grunt) {
             }
         }
         // tests (unit and then integration)
-        // nice to have: create your own server using grunt, but nodejs
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
