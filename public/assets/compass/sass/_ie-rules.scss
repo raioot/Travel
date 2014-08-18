@@ -1,0 +1,77 @@
+/* fuckin IE rules */
+
+.ie-breaking-back {
+    position: absolute;
+    float: left;
+    top: 5px;
+    right: 10px;
+    width: 350px;
+    padding: 20px 25px 20px 25px;
+    background-color: black;
+    -moz-opacity: 0.40;
+    opacity:.40;
+    filter: alpha(opacity=40);
+    z-index: 0;
+    height: 90px;
+}
+
+ .ie-controls{
+    float: right;
+    width: 150px;
+    margin: 20px 5px 0 0;
+    position: relative;
+
+    button {
+        display: block;
+        width: 150px;
+        margin-bottom: 2px;
+        text-align: left;
+        padding-left: 30px;
+        color: white;
+        height: 30px;
+    }
+
+    button:first-child {
+        @include gradient(#F092F7, #FA14F2);
+    }
+
+    button:nth-child(2) { 
+        @include gradient(#77487A, #43184A);
+    }
+
+    button:nth-child(3) {
+        @include gradient(#77157A, #644475);
+    }
+
+    button:last-child {
+        @include gradient(#784496, #5F3C7A);
+    }
+}
+
+.breaking .ie-breaking-fix {
+    position:  relative;
+    float: left;
+}
+
+.ie-travel{
+    position: absolute;
+    width: 450px;
+    height: 270px;
+    float: left;
+    top: 50px;
+    bottom: 10px;
+    left: 500px;
+}
+
+.ie-travel-back{
+    position: absolute;
+    width: 450px;
+    height: 270px;
+    float: left;
+    background-color: black;
+    -moz-opacity: 0.40;
+    opacity:.40;
+    filter: alpha(opacity=40);
+}
+
+/* end of fucking IE rules */

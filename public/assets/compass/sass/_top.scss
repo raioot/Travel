@@ -1,0 +1,40 @@
+/* top links */
+.helperbar{
+    float: right;
+
+    a:last-child {
+        margin-right: 35px;
+    }
+
+    a {
+        margin: 0 15px 0 15px;
+        text-decoration: none;
+        font-size: 9.5px;
+    }
+}
+
+/* end top links */
+
+
+/* logo | head  */
+
+.logo {
+    span {
+        float: left;
+        margin-left: 85px;
+        margin-top: 20px;
+        margin: 5px 0 20px 125px;
+        width: 150px;
+        height: 45px;
+        background-image: url($logo-image);
+        text-indent: -99999px;
+    }
+}
+
+.head{
+    position: relative;
+    height: 75px;
+}
+
+
+/* end logo | head */

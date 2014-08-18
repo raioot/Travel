@@ -1,0 +1,9 @@
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+
+#Release folders
+node_modules/
+.sass-cache/
+bower_components/
+release/

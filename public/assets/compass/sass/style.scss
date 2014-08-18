@@ -1,0 +1,69 @@
+/* COLORS */
+$background-color: #651d8a;
+
+/* MIXINS */
+
+@mixin gradient($color-start, $color-end) {
+    border:none; 
+            display:inline-block;
+            font-weight:lighter; 
+            color: #FFFFFF;
+
+            background-color: $color-start;
+            background-image: -webkit-gradient(linear, left top, left bottom, from($color-start), to($color-end));
+
+            background-image: -webkit-linear-gradient(top, $color-start, $color-end);
+            background-image: -moz-linear-gradient(top, $color-start, $color-end);
+            background-image: -ms-linear-gradient(top, $color-start, $color-end);
+            background-image: -o-linear-gradient(top, $color-start, $color-end);
+
+            background-image: linear-gradient(to bottom, $color-start, $color-end);
+            filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=$color-start, endColorstr=$color-end);
+}
+
+/* IMAGES */
+$logo-image: 'img/logo.png';
+$jumbo-image: 'img/jumbotron-image.png';
+
+/* IMPORTS */
+
+@import 'top';
+@import 'footer';
+@import 'jumbotron';
+@import 'ie-rules';
+
+.container {
+    position: relative;
+}
+
+/* content area */
+.content {
+    width: 900px;
+    margin: 0 auto;
+    position: relative;
+    height: 350px;
+
+    h1 {
+        padding-left:10px;
+        font-weight: lighter;
+        color: #827770;
+    }
+
+    .grid .single span {
+        display: block;
+        font-weight: bold;
+    }
+
+    .grid .single a{
+        padding-top: 10px;
+    }
+}
+
+    .grid .single{
+        width: 30%;
+        float: left;
+        margin: 0 0 0 10px;
+        font-size: 12px;
+    }
+
+/* end content area */
