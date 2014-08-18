@@ -1,7 +1,7 @@
 module.exports = function (grunt) {
 
     var min_dest_path = "public/assets/js/",
-        dev_path = "public/assets/dev/*.js",
+        dev_path = "public/assets/js/*.js",
         build_src_path = "public/assets/build/",
         dist_path = 'public/assets/dist/',
         css_path = 'public/assets/dist/css/',
@@ -33,7 +33,7 @@ module.exports = function (grunt) {
         watch: {
             scripts: {
                 files: [dev_path, css_path + '*.css', css_assets + "*.*", html_files_path],
-                tasks: ['jshint', 'concat', 'sass', 'uglify'],
+                tasks: ['jshint', 'concat', 'sass', 'uglify', 'express:dev'],
                 options: {
                     spawn: false,
                 },
@@ -66,7 +66,7 @@ module.exports = function (grunt) {
         express: {
             dev: {
                 options: {
-                    script: 'server.js'
+                    script: 'index.js'
                 }
             }
         }
@@ -80,7 +80,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-express');
+    grunt.loadNpmTasks('grunt-express-server');
 
-    grunt.registerTask('default', ['clean', 'express', 'watch']);
+    grunt.registerTask('default', ['clean', 'jshint', 'concat', 'sass', 'uglify', 'express', 'watch']);
 };
